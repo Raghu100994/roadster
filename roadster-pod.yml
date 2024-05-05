@@ -15,13 +15,14 @@ spec:
       readinessProbe:
         httpGet:
           path: /roadster/actuator/health/readiness
+          port: 8080
         initialDelaySeconds: 5
-        periodSeconds: 5
+        periodSeconds: 10
         failureThreshold: 3
       livenessProbe:
         httpGet:
           path: /roadster/actuator/health/liveness
+          port: 8080
         initialDelaySeconds: 5
-        periodSeconds: 5
+        periodSeconds: 10
         failureThreshold: 3
-    
